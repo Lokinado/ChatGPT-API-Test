@@ -6,9 +6,11 @@
 #
 
 import openai
+import os
+from dotenv import load_dotenv
 
-openai.organization = "" # temporary use env
-openai.api_key = ""
+openai.organization = os.getenv("ORG_KEY")
+openai.api_key = os.getenv("OPEN_API_KEY")
 
 open_position = "Senior python developer"
 
